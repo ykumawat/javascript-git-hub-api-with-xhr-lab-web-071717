@@ -1,4 +1,4 @@
-const token = `token 6f25488f2461b10a0bbcedbc72a96c1617554386`
+const token = `token `
 
 function getRepositories() {
   event.preventDefault()
@@ -7,7 +7,7 @@ function getRepositories() {
   //req.state = 'OPENED'
   req.addEventListener("load", showRepositories);
   req.open("GET", (`https://api.github.com/users/` + currentUser + `/repos`))
-  req.setRequestHeader("Authorization", `token 6f25488f2461b10a0bbcedbc72a96c1617554386`)
+  req.setRequestHeader("Authorization", `token `)
   req.send()
 }
 
@@ -27,7 +27,7 @@ function getCommits(el, token) {
   req.state = "opened"
   req.addEventListener("load", displayCommits)
   req.open("GET", ('https://api.github.com/repos/' + currentUser + '/'+ name + '/commits'))
-  req.setRequestHeader("Authorization", `token 6f25488f2461b10a0bbcedbc72a96c1617554386`)
+  req.setRequestHeader("Authorization", `token `)
   req.send()
 }
 
@@ -45,7 +45,7 @@ function getBranches(el, token) {
   req.state = "opened"
   req.addEventListener("load", displayBranches)
   req.open("GET", ('https://api.github.com/repos/' + currentUser + '/'+ name + '/branches'))
-  req.setRequestHeader("Authorization", `token 6f25488f2461b10a0bbcedbc72a96c1617554386`)
+  req.setRequestHeader("Authorization", `token `)
   req.send()
 }
 
